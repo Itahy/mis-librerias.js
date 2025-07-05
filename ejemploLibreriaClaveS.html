@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Claves Seguras</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white">
+                        <h4 class="mb-0">Generador de Claves Seguras</h4>
+                    </div>
+                    <div class="card-body">
+                        <form id="claveForm">
+                            <div class="mb-3">
+                                <label for="longitud" class="form-label">Longitud de la clave</label>
+                                <input type="number" class="form-control" id="longitud" value="16" min="8" max="64" required>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Generar Clave</button>
+                        </form>
+                        <div class="mt-4" id="resultado" style="display:none;">
+                            <h5>Clave Generada:</h5>
+                            <div class="input-group">
+                                <input type="text" class="form-control" id="claveGenerada" readonly>
+                                <button class="btn btn-outline-secondary" type="button" id="copiarClave">Copiar</button>
+                            </div>
+                            <div class="form-text text-success mt-2" id="copiadoMsg" style="display:none;">¡Clave copiada!</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="librerias/impuestosLib.js"></script>
+    <script src="js/funcionesLib3.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
